@@ -1,0 +1,31 @@
+name: Relatar um problema
+description: Informe um erro reproduzível no Sopro
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o resultado observado e o esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir
+      placeholder: Liste passos curtos e remova dados privados dos arquivos.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Navegador e sistema
+      placeholder: Ex. Chrome 140, Android 16
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Formato envolvido
+      options: [MusicXML/XML, MXL, MIDI, Catálogo, Não se aplica]
